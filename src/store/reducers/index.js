@@ -1,21 +1,18 @@
 import { combineReducers } from 'redux';
 
 import eventsReducer from './eventsReducer';
+import filterReducer from './filterReducer';
 
 export default combineReducers({
   events: eventsReducer,
+  filter: filterReducer,
   // currentEvent: currentEventReducer,
-  // filter: filterReducer,
 });
 
 
 /*
 state = {
-  events: {
-    userName,
-    avatar,
-    token,
-  },
+  events: [],
   currentEvent: {},
   filter: {},
 };

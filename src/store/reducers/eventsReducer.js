@@ -1,7 +1,10 @@
-// import { SET_CURRENT_USER } from './../actions/currentUser';
+import { SET_EVENTS } from './../constants';
 
-export default function(state = {}, action) {  
+export default function(state = [], action) {  
   switch (action.type) {
+    case SET_EVENTS:
+      console.log(action.events);
+      return state;
     default:
       return state;
   }

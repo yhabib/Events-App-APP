@@ -21,7 +21,9 @@ const Root = () => (
   <Provider store={ store }>
     <MuiThemeProvider>
       <Router>
-        <Route exact path="/" component={ Layout } />
+        <Route exact path="/" component={ Layout }>
+          {/*<Route exact path="/list-view" component={ ListViewContainer } />*/}
+        </Route>
       </Router>
     </MuiThemeProvider>
   </Provider>
@@ -30,5 +32,5 @@ const Root = () => (
 
 ReactDOM.render(
   <Root />,
-  document.getElementById('root')
+  document.getElementById('root') 
 );

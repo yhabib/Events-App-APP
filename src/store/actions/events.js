@@ -1,4 +1,4 @@
-import { SET_EVENTS, URL_BASE } from './../constants';
+import { SET_EVENTS, BASE_URL } from './../constants';
 
 
 /////////////////////////
@@ -18,23 +18,13 @@ function setEvents(events) {
 
 // need to use thuk in order to convert this function into an object that
 // will be understable for the reducer
-export const login = (data) => (dispatch) => {    
-  const myHeaders = new Headers({ 
-    'Content-Type': 'application/json',
-  });
-  const config = {
-    method: 'POST',
-    headers: myHeaders,
-    body: JSON.stringify(data),
-  };
-
-  return fetch(`${URL_BASE}/api/login`, config)
+export const fetchEvents = (data) => (dispatch) => {    
+  const url = `${BASE_URL}/events`;
+  return fetch(url)
     .then(res => res.json())
-    .then(user => {
-      const action = setCurrentUser(user);
-      console.log(action);
-      
-      dispatch(action);
-    })
-    .catch(err => console.log(err));
+    .then(events => {
+      console.log(events);
+      // dispatch(action);
+    });
+    // .catch(err => console.log(err));
 }
