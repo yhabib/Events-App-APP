@@ -23,8 +23,9 @@ export const fetchEvents = (data) => (dispatch) => {
   return fetch(url)
     .then(res => res.json())
     .then(events => {
-      console.log(events);
-      // dispatch(action);
-    });
-    // .catch(err => console.log(err));
+      // console.log(events);
+      const action = setEvents(events);
+      dispatch(action);
+    })
+    .catch(err => console.log(err));
 }

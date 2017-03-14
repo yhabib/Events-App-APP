@@ -8,26 +8,23 @@ import { fetchEvents } from './../../store/actions/events';
 
 class ListViewContainer extends Component {
 
+  componentDidMount() {
+    this.props.fetchEvents();
+  }
+
   render() {
-    console.log(this.props);
-    return <ListView />
+    return <ListView events={ this.props.events } />
   }
 }
+
+
+
+const mapStateToProps = (state) => ({
+  events: state.events
+});
 
 const mapDispatchToProps = (dispatch) => ({
   fetchEvents: (data) => dispatch(fetchEvents(data))
 });
 
-export default connect(undefined, mapDispatchToProps)(ListViewContainer);
-
-
-// fetchEvents: function(data) {
-//   return dispatch(fn(data));
-// }
-
-// fn = function(data) {
-//   return function(dispatch) {
-//     return 
-
-//   }
-// }   
+export default connect(mapStateToProps, mapDispatchToProps)(ListViewContainer);
