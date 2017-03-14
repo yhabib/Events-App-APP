@@ -1,5 +1,4 @@
-# Events App FrontEnd
-
+# App
 ## Components
 * Header:
   * Logo
