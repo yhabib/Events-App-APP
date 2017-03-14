@@ -3,8 +3,7 @@ import React, { Component } from 'react';
 import './index.css'
 
 class Header extends Component {
-    render() {
-      console.log(this.props);      
+    render() {    
         return (
             <div className="Header">
                 <div className="HeaderBanner">

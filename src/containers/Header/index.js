@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Header from './../../components/Header';
+import { BASE_URL } from './../../store/constants';
 
 class HeaderContainer extends Component {
   constructor(props) {
@@ -11,7 +12,10 @@ class HeaderContainer extends Component {
   } 
 
   componentDidMount() {
-    
+    const url = `${BASE_URL}/events/count`;
+    fetch(url)
+      .then(data => data.json())
+      .then(count => this.setState({ numberOfEvents: count }));
   }
 
   render() {
