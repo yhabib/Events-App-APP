@@ -36,7 +36,7 @@ class Filter extends Component {
         console.log(this.props);
         return (  
           <div className="Filter">
-            <DropDownMenu value={this.props.value} onChange={ this.props.onChangeValue }>
+            <DropDownMenu value={ this.props.value } onChange={ this.props.onChangeValue }>
               {
                 this.props.states.map((state, i) => 
                   <MenuItem key={ i } value={ i } primaryText={ state } />)
@@ -44,8 +44,8 @@ class Filter extends Component {
             </DropDownMenu>
             <DropDownMenu>
               {
-                this.props.cities.map((state, i) => 
-                  <MenuItem key={ i } primaryText={ state } />)
+                this.props.cities.map((city, i) => 
+                  <MenuItem key={ i } primaryText={ city } />)
               }
             </DropDownMenu>
 

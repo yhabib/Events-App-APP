@@ -18,14 +18,7 @@ class FilterContainer extends Component {
       const url = `${BASE_URL}/location/cities/${this.state.states[value]}`
       fetch(url)
         .then(data => data.json())
-        .then(cities => {
-          console.log(cities);
-          
-          const c = [...new Set(cities)];
-          console.log(c);
-          
-          this.setState({ cities: c })
-        });
+        .then(cities => this.setState({ cities: [...new Set(cities)] }));
 
     }
 
