@@ -3,13 +3,13 @@ import { Component } from 'react';
 import './index.css'
 import Filter from '../Filter'
 
-class EventList extends Component {
+class ListView extends Component {
     render() {
         return (
-            <div className="EventList">
+            <div className="">
                 <h2><span>!</span>manifstations/zurich Area</h2>
             </div>
         );
     }
 }
-export default EventList;
+export default ListView;
