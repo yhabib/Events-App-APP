@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
-import {  } from 'react';
 
-// import DropDownList from '../DropDownList';
 import './index.css'
 
 class Header extends Component {
     render() {
+      console.log(this.props);      
         return (
             <div className="Header">
                 <div className="HeaderBanner">
                     <div className="logo"> </div>
                     <div className="social">
                         <ul>
-                            <li>Facebook</li>
+                            <li>Facebooxk</li>
                             <li>Twitter</li>
                             <li>Instagrame</li>
                             <li>Youtube</li>
@@ -20,7 +19,7 @@ class Header extends Component {
                     </div>
                 </div>
                 <div className="amountOfEvent">
-                    <h3>1 323 435 <span>Actual Event</span></h3>
+                    <h3>{this.props.numberOfEvents}<span> Actual Event</span></h3>
                 </div>
                 <div className="content">
                     <h2>Where to Party in Switzerland?</h2>
