@@ -1,8 +1,7 @@
 import { combineReducers } from 'redux';
 
-import CurrentEventReducer from './currentEventReducer';
-import EventReducer from './EventReducer';
-import FilterReducer from './filterReducer';
+import eventsReducer from './eventsReducer';
 
-
-export default combineReducers({});
+export default combineReducers({
+  eventsReducer
+});

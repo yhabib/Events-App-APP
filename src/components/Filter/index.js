@@ -1,9 +1,10 @@
-import React from 'react';
-import { Component } from 'react';
-import './index.css'
+import React, { Component } from 'react';
+
 import AutoComplete from 'material-ui/AutoComplete';
 import RaisedButton from 'material-ui/RaisedButton';
 import DatePicker from 'material-ui/DatePicker';
+
+import './index.css'
 
 const style = {
     margin: 12,

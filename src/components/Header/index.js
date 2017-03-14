@@ -1,7 +1,9 @@
-import React from 'react';
-import { Component } from 'react';
-import './index.css'
+import React, { Component } from 'react';
+import {  } from 'react';
+
 // import DropDownList from '../DropDownList';
+import './index.css'
+
 class Header extends Component {
     render() {
         return (
@@ -28,4 +30,5 @@ class Header extends Component {
         );
     }
 }
+
 export default Header;

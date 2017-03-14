@@ -1,5 +1,5 @@
 // Store will be created here
 import { createStore } from 'redux'
-import AllReducer from './reducers/AllReducer.js'
+import reducer from './reducers'
 
-export default createStore(AllReducer,defaultDate);
+export default createStore(reducer);
