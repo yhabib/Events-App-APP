@@ -1,57 +1,60 @@
+.logo {
+    width: 80px;
+    height: 80px;
+    background: url(logo.jpg) no-repeat;
+    margin-left: 30px;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+}
 .Header {
-    width: 100%;
-    height: 40vh;
+    background-color: white;
+
 }
 .HeaderBanner {
-    width: 100%;
-    height: 80vh;
-    display: flex;
-    justify-content:space-between;
-    background-color: green;
+
 }
-.logo {
-    margin-left: 5vw;
-    margin-top: 5vh;
-    width: 7vw;
-    height: 7vw;
-    background: #EEEAD1;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    border-radius: 50%;
-}
+
 .social {
-    margin-right: 5vw;
+
+
+
 }
 .social ul {
-  list-style: none;
-  width: 50vw;
-  display: flex;
+  float: right;
+  position: absolute;
+  top:15px;
+  right: 30px;
+  color: grey;
 
-  justify-content: center;
+
 
 }
 .social ul li {
-    display: inline-flex;
-    margin-left: 2%;
+  float: left;
+  margin-left: 30px;
+  text-decoration: none;
+  list-style-type:none;
+
 }
 .amountOfEvent {
-    width: 100%;
-    height: 10vh;
-   position: relative;
-   bottom: 75vh;
-   width: 30%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  left: 60%;
-  color: #e3A75D;
+  color: orange;
+  float: right;
+  display: inline-block;
+  position: relative;
+  top: 50px;
+  margin-right: 50px;
+
+
 }
 .content {
-    background-color: red;
-    position: relative;
-    bottom: 40%;
+  display: inline-block;
+  position: relative;
+  top:120px;
+  margin-left: 130px;
+  color: grey;
 }
 
+.content h4{
+  color: silver;
+}

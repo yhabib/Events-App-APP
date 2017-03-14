@@ -9,7 +9,7 @@ class Header extends Component {
         return (
             <div className="Header">
                 <div className="HeaderBanner">
-                    <div className="logo">Go</div>
+                    <div className="logo"> </div>
                     <div className="social">
                         <ul>
                             <li>Facebook</li>
@@ -25,7 +25,7 @@ class Header extends Component {
                 <div className="content">
                     <h2>Where to Party in Switzerland?</h2>
                     <h4>Search and Found all Your Event in Swityerland with Go.</h4>
-                </div>  
+                </div>
             </div>
         );
     }
