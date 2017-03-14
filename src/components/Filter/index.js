@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
-import AutoComplete from 'material-ui/AutoComplete';
+import DropDownMenu from 'material-ui/DropDownMenu';
+import MenuItem from 'material-ui/MenuItem';
 import RaisedButton from 'material-ui/RaisedButton';
 import DatePicker from 'material-ui/DatePicker';
 
@@ -15,44 +16,46 @@ class Filter extends Component {
         controlledDate: null,
     };
 
-    handleUpdateInput = (value) => {
-        this.setState({
-            dataSource: [
-                value,
+    // handleUpdateInput = (value) => {
+    //     this.setState({
+    //         dataSource: [
+    //             value,
 
-            ],
-        });
-    };
-    handleChange = (event, date) => {
-    this.setState({
-      controlledDate: date,
-    });
-  };
+    //         ],
+    //     });
+    // };
+    // handleChange = (event, date) => {
+    //   this.setState({
+    //     controlledDate: date,
+    //   });
+  // };
 
-    render() {
-        return (
-            <div className="Filter">
 
-                <AutoComplete
-                    hintText="Kanton"
-                    dataSource={this.state.dataSource}
-                    onUpdateInput={this.handleUpdateInput}
-                />
 
-                <AutoComplete
-                    hintText="City"
-                    dataSource={this.state.dataSource}
-                    onUpdateInput={this.handleUpdateInput}
-                />
+    render() {      
+        console.log(this.props);
+        return (  
+          <div className="Filter">
+            <DropDownMenu value={this.props.value} onChange={ this.props.onChangeValue }>
+              {
+                this.props.states.map((state, i) => 
+                  <MenuItem key={ i } value={ i } primaryText={ state } />)
+              }
+            </DropDownMenu>
+            <DropDownMenu>
+              {
+                this.props.cities.map((state, i) => 
+                  <MenuItem key={ i } primaryText={ state } />)
+              }
+            </DropDownMenu>
 
-                <DatePicker
-                    hintText="Controlled Date Input"
-                    value={this.state.controlledDate}
-                    onChange={this.handleChange}
-                />
-                <RaisedButton label="Search" primary={true} style={style} />
-
-            </div>
+            <DatePicker
+              hintText="Controlled Date Input"
+              value={this.state.controlledDate}
+              onChange={this.handleChange}
+            />
+            <RaisedButton label="Search" primary={true} style={style} />
+          </div>
         );
     }
 }
