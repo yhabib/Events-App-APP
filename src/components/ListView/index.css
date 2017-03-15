@@ -1,0 +1,25 @@
+.posterGridImg{
+  width: 240px;
+
+}
+
+.posterGridBox{
+
+  width: 240px;
+  height: 320px;
+  margin-left: 50px;
+  margin-top: 50px;
+  margin-bottom:60px;
+  float:left;
+  display: inline;
+  background-color: silver;
+  text-align: center;
+}
+
+
+
+.posterGridBox h3{
+font-size: 20px;
+color: grey;
+
+}

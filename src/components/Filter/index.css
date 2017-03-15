@@ -1,6 +1,32 @@
 .Filter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 25%;
+  width: 80%;
+  height: 240px;
+  margin: auto;
+}
+
+.Item{
+  width: 25% !important;
+  float: left;
+
+}
+
+.FilterContainer{
+  width: 100%;
+  position: relative;
+  top: 150px;
+  display: inline-block;
+}
+
+.SearchButton{
+  float: right;
+  display: inline-block;
+  position: relative;
+  bottom: 2px;
+}
+
+.Date{
+  position: relative;
+  top: 8px;
+  display: inline-block;
+
 }

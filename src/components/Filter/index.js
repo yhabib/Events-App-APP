@@ -32,26 +32,28 @@ class Filter extends Component {
 
   render() {
     return (
-      <div className="Filter">
-        <DropDownMenu value={this.props.value} onChange={this.props.onChangeValue}>
-          {
-            this.props.states.map((state, i) =>
-              <MenuItem key={i} value={i} primaryText={state} />)
-          }
-        </DropDownMenu>
-        <DropDownMenu>
-          {
-            this.props.cities.map((city, i) =>
-              <MenuItem key={i} primaryText={city} />)
-          }
-        </DropDownMenu>
+      <div className="FilterContainer">
+        <div className="Filter">
+          <DropDownMenu className="Item" value={this.props.value} onChange={this.props.onChangeValue}>
+            {
+              this.props.states.map((state, i) =>
+                <MenuItem key={i} value={i} primaryText={state} />)
+            }
+          </DropDownMenu>
+          <DropDownMenu className="Item">
+            {
+              this.props.cities.map((city, i) =>
+                <MenuItem key={i} primaryText={city} />)
+            }
+          </DropDownMenu>
 
-        <DatePicker
-          hintText="Controlled Date Input"
-          value={this.state.controlledDate}
-          onChange={this.handleChange}
-        />
-        <RaisedButton label="Search" primary={true} style={style} />
+          <DatePicker className="Date"
+            hintText="Controlled Date Input"
+            value={this.state.controlledDate}
+            onChange={this.handleChange}
+          />
+          <RaisedButton className="SearchButton" label="Search" primary={true} style={style} />
+        </div>
       </div>
     );
   }

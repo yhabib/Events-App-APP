@@ -14,14 +14,16 @@ class ListView extends Component {
   }
 }
 
-function Item(props) {  
+function Item(props) {
   return (
-    <div>
-      <img src={ props.event.eventImage } />
-      <date>{props.event.eventStartDate}</date>
-      <h3>{props.event.name}</h3>
+    <div className="posterGridBox">
+        <img src={ props.event.eventImage } className="posterGridImg"  />
+        <h3>{props.event.name}</h3>
     </div>
   )
 }
 
 export default ListView;
+
+  //<date>{props.event.eventStartDate}</date>
+//<h3>{props.event.name}</h3>
