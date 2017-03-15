@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import ListView from './../../components/ListView';
+import GridView from './../../components/GridView';
 
 import { fetchEvents } from './../../store/actions/events';
 
@@ -13,7 +13,7 @@ class ListViewContainer extends Component {
   }
 
   render() {
-    return <ListView events={ this.props.events } />
+    return <GridView events={ this.props.events } />
   }
 }
 

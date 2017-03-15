@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 
 import './index.css'
 
-class ListView extends Component {
+class GridView extends Component {
   render() {
     return (
-      <div>
+      <div className="GridView_container">
         {
           this.props.events.map((event, index) => <Item key={ index } event={ event } />)
         }
@@ -23,7 +23,7 @@ function Item(props) {
   )
 }
 
-export default ListView;
+export default GridView;
 
   //<date>{props.event.eventStartDate}</date>
 //<h3>{props.event.name}</h3>
