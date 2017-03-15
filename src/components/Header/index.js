@@ -22,7 +22,7 @@ class Header extends Component {
         </div>
         <div className="content">
           <h2>Where to Party in Switzerland?</h2>
-          <h4>Search and Found all Your Event in Swityerland with Go.</h4>
+          <h4>Search and Found all Your Event, Concert, Theater, and more in Swityerland with Go.</h4>
         </div>
       </div>
     );

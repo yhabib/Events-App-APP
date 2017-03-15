@@ -5,7 +5,7 @@ import './index.css'
 class ListView extends Component {
   render() {
     return (
-      <div>
+      <div className="contentContainer">
         {
           this.props.events.map((event, index) => <Item key={ index } event={ event } />)
         }

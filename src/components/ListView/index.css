@@ -1,5 +1,6 @@
 .posterGridImg{
   width: 240px;
+  box-shadow: 7px 7px 7px #ddd;
 
 }
 
@@ -19,7 +20,13 @@
 
 
 .posterGridBox h3{
-font-size: 20px;
+font-size: 23px;
 color: grey;
+font-family: 'Roboto Condensed', sans-serif;
 
+}
+
+.contentContainer{
+  margin: auto;
+  width: 90%;
 }
