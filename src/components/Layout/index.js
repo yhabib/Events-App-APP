@@ -2,14 +2,14 @@ import React from 'react';
 
 import HeaderContainer from './../../containers/Header';
 import FilterContainer from './../../containers/Filter';
-import ListViewContainer from './../../containers/ListView';
+import GridViewContainer from './../../containers/GridView';
 
 export default function({ children }) {  
   return (
     <div>
       <HeaderContainer />
       <FilterContainer />
-      <ListViewContainer />
+      <GridViewContainer />
       { children }
     </div>
   )
