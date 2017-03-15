@@ -15,7 +15,7 @@ class FilterContainer extends Component {
 
     handleChange = (e, value) => {
       this.setState({ value });
-      const url = `${BASE_URL}/location/cities/${this.state.states[value]}`
+      const url = `${BASE_URL}/locations/states/${this.state.states[value]}/cities`;
       fetch(url)
         .then(data => data.json())
         .then(cities => this.setState({ cities: [...new Set(cities)] }));
@@ -23,7 +23,7 @@ class FilterContainer extends Component {
     }
 
   componentDidMount() {
-    const url = `${BASE_URL}/location/states`;
+    const url = `${BASE_URL}/locations/states`;
     fetch(url)
       .then(data => data.json())
       .then(states => this.setState({ states: [...new Set(states)] }));
