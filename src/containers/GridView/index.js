@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import GridView from './../../components/GridView';
+import FilterContainer from './../Filter';
 
 import { fetchEvents } from './../../store/actions/events';
 
@@ -13,10 +14,14 @@ class ListViewContainer extends Component {
   }
 
   render() {
-    return <GridView events={ this.props.events } />
+    return (
+      <div>
+        <FilterContainer />
+        <GridView events={ this.props.events } />
+      </div>
+    )
   }
 }
-
 
 
 const mapStateToProps = (state) => ({
@@ -24,7 +29,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  fetchEvents: (data) => dispatch(fetchEvents(data))
+  fetchEvents: (data) => dispatch(fetchEvents(data)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ListViewContainer);

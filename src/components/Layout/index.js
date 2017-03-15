@@ -7,9 +7,7 @@ import GridViewContainer from './../../containers/GridView';
 export default function({ children }) {  
   return (
     <div>
-      <HeaderContainer />
-      <FilterContainer />
-      <GridViewContainer />
+      
       { children }
     </div>
   )

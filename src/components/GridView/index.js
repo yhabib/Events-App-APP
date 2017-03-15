@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
+import { Route, Link } from 'react-router-dom';
+
+import ItemViewContainer from './../ItemView';
 
 import './index.css'
 
 class GridView extends Component {
   render() {
+    console.log(this.props);
+    
     return (
       <div className="GridView_container">
         {
@@ -14,16 +19,19 @@ class GridView extends Component {
   }
 }
 
-function Item(props) {
+function Item(props) {  
   return (
     <div className="posterGridBox">
-        <img src={ props.event.eventImage } className="posterGridImg"  />
+        <Link to={ `/events/${props.event.id}` }>
+          <img src={ props.event.eventImage } className="posterGridImg" alt={ props.event.name } />
+        </Link>
         <h3>{props.event.name}</h3>
+        <Route 
+          path="/event/:id" 
+          render={ ({match}) => <ItemViewContainer /> } />
     </div>
   )
 }
 
 export default GridView;
 
-  //<date>{props.event.eventStartDate}</date>
-//<h3>{props.event.name}</h3>
