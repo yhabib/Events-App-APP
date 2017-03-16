@@ -2,31 +2,28 @@
   width: 230px;
   height: 320px;
   box-shadow: 7px 7px 7px #ddd;
+}
 
+.GridView_container {
+  margin: auto;
+  width: 90%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 
 .posterGridBox{
-  width: 230px;
+  width: 250px;
   height: 320px;
-  margin-left: 50px;
+  margin-bottom: 50px;
   margin-top: 50px;
-  margin-bottom:50px;
-  float:left;
-  display: inline;
-  background-color: silver;
+  background-color: white;
   text-align: center;
 }
 
-
-
 .posterGridBox h3{
-font-size: 23px;
-color: grey;
-font-family: 'Roboto Condensed', sans-serif;
-
+  font-size: 23px;
+  color: grey;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
-.GridView_container{
-  margin: auto;
-  width: 90%;
-}

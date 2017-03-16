@@ -22,13 +22,13 @@ class GridView extends Component {
 function Item(props) {
   return (
     <div className="posterGridBox">
-        <Link to={ `/events/${props.event.id}` }>
-          <img src={ props.event.eventImage } className="posterGridImg" alt={ props.event.name } />
-        </Link>
-        <h3>{props.event.name}</h3>
-        <Route
-          path="/event/:id"
-          render={ ({match}) => <ItemViewContainer /> } />
+      <Link to={ `/events/${props.event.id}` }>
+        <img src={ props.event.eventImage } className="posterGridImg" alt={ props.event.name } />
+      </Link>
+      <h3>{props.event.name}</h3>
+      <Route
+        path="/event/:id"
+        render={ ({match}) => <ItemViewContainer /> } />
     </div>
   )
 }
