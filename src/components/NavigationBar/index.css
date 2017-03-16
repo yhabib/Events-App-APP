@@ -1,2 +1,20 @@
 .NavigationBar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+
+.NavigationBar a {
+  font-size: 25px;
+  color: gray;
+}
+
+/*.NavigationBar a.active {
+  color: red;
+}*/
+
+.NavigationBar i {
+  font-size: 25px;
+  padding-left: 20px;
+  color: inherit;
 }

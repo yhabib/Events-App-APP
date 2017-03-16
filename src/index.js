@@ -24,19 +24,19 @@ injectTapEventPlugin();
 
 
 const Root = () => (
-  <Provider store={ store }>
+  <Provider store={store}>
     <MuiThemeProvider>
       <Router>
-        <div style={{width: "100%", height: "100%" }}>
-          <Switch>
-            <Route exact path="/" component={ Home } />
-            <div>
-              <HeaderContainer />
-              <Route path="/events/grid" component={ ViewContainer } />
-              <Route path="/events/list" component={ ViewContainer } />
-              <Route path="/events/:id" component={ ItemViewContainer }/>
-            </div>
-          </Switch>
+        <div style={{ width: "100%", height: "100%" }}>
+          <Route exact path="/" component={Home} />
+          <div>
+            <HeaderContainer />
+            <Switch>
+              <Route path="/events/grid" component={ViewContainer} />
+              <Route path="/events/list" component={ViewContainer} />
+              <Route path="/events/:id" component={ItemViewContainer} />
+            </Switch>
+          </div>
         </div>
       </Router>
     </MuiThemeProvider>
@@ -46,5 +46,5 @@ const Root = () => (
 
 ReactDOM.render(
   <Root />,
-  document.getElementById('root') 
+  document.getElementById('root')
 );
