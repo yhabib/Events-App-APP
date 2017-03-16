@@ -8,7 +8,7 @@ import './index.css'
 class GridView extends Component {
   render() {
     console.log(this.props);
-    
+
     return (
       <div className="GridView_container">
         {
@@ -19,19 +19,18 @@ class GridView extends Component {
   }
 }
 
-function Item(props) {  
+function Item(props) {
   return (
     <div className="posterGridBox">
         <Link to={ `/events/${props.event.id}` }>
           <img src={ props.event.eventImage } className="posterGridImg" alt={ props.event.name } />
         </Link>
         <h3>{props.event.name}</h3>
-        <Route 
-          path="/event/:id" 
+        <Route
+          path="/event/:id"
           render={ ({match}) => <ItemViewContainer /> } />
     </div>
   )
 }
 
 export default GridView;
-

@@ -39,6 +39,7 @@
 }
 .amountOfEvent {
   font-family: 'Roboto Condensed', sans-serif;
+  font-weight:bolder;
   color: orange;
   float: right;
   display: inline-block;
