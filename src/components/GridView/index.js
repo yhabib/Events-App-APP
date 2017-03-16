@@ -8,7 +8,7 @@ class GridView extends Component {
     return (
       <div className="GridView_container">
         {
-          this.props.events.map((event, index) => <Item key={ index } event={ event } />)
+          this.props.events.map((event, index) => <Item key={index} event={event} />)
         }
       </div>
     );
@@ -18,8 +18,8 @@ class GridView extends Component {
 function Item(props) {
   return (
     <div className="posterGridBox">
-      <Link to={ `/events/${props.event.id}` }>
-        <img src={ props.event.eventImage } className="posterGridImg" alt={ props.event.name } />
+      <Link to={`/events/${props.event.id}`}>
+        <img src={props.event.eventImage} className="posterGridImg" alt={props.event.name} />
       </Link>
       <h3>{props.event.name}</h3>
     </div>

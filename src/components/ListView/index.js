@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './index.css'
 
 class ListView extends Component {
   render() {
     return (
-      <div className="contentContainer">
+      <div className="ListView_container">
         {
-          this.props.events.map((event, index) => <Item key={ index } event={ event } />)
+          this.props.events.map((event, index) => <Item key={index} event={event} />)
         }
       </div>
     );
@@ -16,8 +17,10 @@ class ListView extends Component {
 function Item(props) {
   return (
     <div className="posterGridBox">
-        <img src={ props.event.eventImage } className="posterGridImg"  alt="Events cover"/>
-        <h3>{props.event.name}</h3>
+      <Link to={`/events/${props.event.id}`}>
+        <img src={props.event.eventImage} className="posterGridImg" alt={props.event.name} />
+      </Link>
+      <h3>{props.event.name}</h3>
     </div>
   )
 }

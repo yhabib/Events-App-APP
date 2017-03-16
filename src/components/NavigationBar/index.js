@@ -3,8 +3,8 @@ import { NavLink } from 'react-router-dom';
 
 import './index.css';
 
-export default function () {
-  console.log("Navigation render");
+// Why does not work??????
+export default function() {
   return (
     <nav className="NavigationBar">
       <NavLink to="/events/grid" activeStyle={{ color: 'orange' }}>

@@ -16,16 +16,14 @@ class ViewContainer extends Component {
   }
 
   render() {
-    console.log(this.props);
-    
     return (
       <div>
         <FilterContainer />
         <NavigationBarContainer />
         {
           this.props.location.pathname.split('/').includes('grid') ?
-            <GridView events={ this.props.events } /> :
-            <ListView events={ this.props.events } />
+            <GridView events={this.props.events} /> :
+            <ListView events={this.props.events} />
         }
       </div>
     )
