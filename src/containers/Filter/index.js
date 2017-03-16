@@ -18,15 +18,15 @@ class FilterContainer extends Component {
   }
 
   handleChangeState = (e, value) => {
-    this.setState({ stateValue: value });
+    this.setState({ stateValue: value });    
     const url = `${BASE_URL}/locations/states/${this.state.states[value]}/cities`;
+    
     fetch(url)
       .then(data => data.json())
       .then(cities => this.setState({ cities: [...new Set(cities)] }));
-
   }
 
-  handleChangeCity = (e, value) => {
+  handleChangeCity = (e, value) => {    
     this.setState({ cityValue: value });
     const url = `${BASE_URL}/locations/states/${this.state.states[value]}/cities`;
     fetch(url)
@@ -36,9 +36,9 @@ class FilterContainer extends Component {
   }
 
   submitFilter = () => {
-    console.log(this.state);
-    // change filterState
-    
+    const state = this.state.states[this.state.stateValue];
+    const city = this.state.cities[this.state.cityValue];    
+    this.props.setFilter({state, city});
   };
 
   componentDidMount() {
@@ -64,4 +64,4 @@ const mapDispatchToProps = (dispatch) => ({
   setFilter: filter => dispatch(setFilter(filter))
 });
 
-export default connect(mapDispatchToProps)(FilterContainer);
+export default connect(undefined, mapDispatchToProps)(FilterContainer);
