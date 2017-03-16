@@ -11,7 +11,6 @@ function setCurrentEvent(event) {
 
 
 
-
 /////////////////////////
 // - action functions - //
 /////////////////////////
@@ -19,13 +18,10 @@ function setCurrentEvent(event) {
 // need to use thuk in order to convert this function into an object that
 // will be understable for the reducer
 export const fetchEvent = (id) => (dispatch) => {    
-  console.log(id);
   const url = `${BASE_URL}/events/${id}`;
+
   return fetch(url)
     .then(res => res.json())
-    .then(event => {
-      const action = setCurrentEvent(event);
-      dispatch(action);
-    })
+    .then(event => dispatch(setCurrentEvent(event)))
     .catch(err => console.error(err));
 }

@@ -10,8 +10,6 @@ function setEvents(events) {
 }
 
 
-
-
 /////////////////////////
 // - action functions - //
 /////////////////////////
@@ -22,9 +20,6 @@ export const fetchEvents = (data) => (dispatch) => {
   const url = `${BASE_URL}/events`;
   return fetch(url)
     .then(res => res.json())
-    .then(events => {
-      const action = setEvents(events);
-      dispatch(action);
-    })
+    .then(events => dispatch(setEvents(events)))
     .catch(err => console.error(err));
 }

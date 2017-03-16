@@ -15,7 +15,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 import store from './store';
 // import Layout from './components/Layout';
 import HeaderContainer from './containers/Header';
-import GridViewContainer from './containers/GridView';
+import ViewContainer from './containers/View';
 import ItemViewContainer from './containers/ItemView';
 
 import './index.css';
@@ -30,7 +30,7 @@ const Root = () => (
           <HeaderContainer />
           <Switch>
             {/*<Route path="/view" component={ FilterContainer} />*/}
-            <Route path="/events/grid" component={ GridViewContainer } />
+            <Route path="/events/grid" component={ ViewContainer } />
             <Route path="/events/:id" component={ ItemViewContainer }/>
           </Switch>
         </div>

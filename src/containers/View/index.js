@@ -7,7 +7,7 @@ import FilterContainer from './../Filter';
 import { fetchEvents } from './../../store/actions/events';
 
 
-class ListViewContainer extends Component {
+class ViewContainer extends Component {
 
   componentDidMount() {
     this.props.fetchEvents();
@@ -32,4 +32,4 @@ const mapDispatchToProps = (dispatch) => ({
   fetchEvents: (data) => dispatch(fetchEvents(data)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(ListViewContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(ViewContainer);
