@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import ItemViewContainer from './../ItemView';
 
@@ -26,9 +26,6 @@ function Item(props) {
         <img src={ props.event.eventImage } className="posterGridImg" alt={ props.event.name } />
       </Link>
       <h3>{props.event.name}</h3>
-      <Route
-        path="/event/:id"
-        render={ ({match}) => <ItemViewContainer /> } />
     </div>
   )
 }
