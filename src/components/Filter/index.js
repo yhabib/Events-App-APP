@@ -16,20 +16,6 @@ class Filter extends Component {
     controlledDate: null,
   };
 
-  // handleUpdateInput = (value) => {
-  //     this.setState({
-  //         dataSource: [
-  //             value,
-
-  //         ],
-  //     });
-  // };
-  // handleChange = (event, date) => {
-  //   this.setState({
-  //     controlledDate: date,
-  //   });
-  // };
-
   render() {
     return (
       <div className="FilterContainer">

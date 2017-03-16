@@ -1,20 +1,16 @@
+.FilterContainer{
+  width: 100%;
+  padding-bottom: 50px;
+}
+
 .Filter {
   width: 80%;
-  height: 240px;
   margin: auto;
 }
 
 .Item{
   width: 25% !important;
   float: left;
-
-}
-
-.FilterContainer{
-  width: 100%;
-  position: relative;
-  top: 170px;
-  display: inline-block;
 }
 
 .SearchButton{

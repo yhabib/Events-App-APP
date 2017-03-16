@@ -23,7 +23,7 @@ class ViewContainer extends Component {
         <FilterContainer />
         <NavigationBarContainer />
         {
-          this.props.location.pathname.split('/').includes('list') ?
+          this.props.location.pathname.split('/').includes('grid') ?
             <GridView events={ this.props.events } /> :
             <ListView events={ this.props.events } />
         }
@@ -31,7 +31,6 @@ class ViewContainer extends Component {
     )
   }
 }
-
 
 const mapStateToProps = (state) => ({
   events: state.events
