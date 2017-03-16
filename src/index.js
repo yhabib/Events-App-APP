@@ -29,8 +29,8 @@ const Root = () => (
         <div>
           <HeaderContainer />
           <Switch>
-            {/*<Route path="/view" component={ FilterContainer} />*/}
             <Route path="/events/grid" component={ ViewContainer } />
+            <Route path="/events/list" component={ ViewContainer } />
             <Route path="/events/:id" component={ ItemViewContainer }/>
           </Switch>
         </div>

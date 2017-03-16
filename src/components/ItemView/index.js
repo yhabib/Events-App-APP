@@ -1,16 +1,11 @@
 import React, { Component } from 'react';
-
-
 import './index.css';
 
-
 class ItemView extends Component {
-
   render() {
     return <Item event={ this.props.event } />
   }
 }
-
 
 function Item(props) {
   const event = props.event || {};

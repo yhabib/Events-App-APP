@@ -7,8 +7,6 @@ import './index.css'
 
 class GridView extends Component {
   render() {
-    console.log(this.props);
-
     return (
       <div className="GridView_container">
         {

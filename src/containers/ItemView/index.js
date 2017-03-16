@@ -9,7 +9,7 @@ import { fetchEvent } from './../../store/actions/currentEvent';
 
 class ItemViewContainer extends Component {
 
-  componentDidMount() {
+  componentDidMount() {    
     this.props.setCurrentEvent(Number(this.props.match.params.id));
   }
 

@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import GridView from './../../components/GridView';
 import ListView from './../../components/ListView';
 import FilterContainer from './../Filter';
+import NavigationBarContainer from './../NavigationBar';
 
 import { fetchEvents } from './../../store/actions/events';
 
@@ -15,11 +16,17 @@ class ViewContainer extends Component {
   }
 
   render() {
+    console.log(this.props);
+    
     return (
       <div>
         <FilterContainer />
-        {/*<GridView events={ this.props.events } />*/}
-        <ListView events={ this.props.events } />
+        <NavigationBarContainer />
+        {
+          this.props.location.pathname.split('/').includes('list') ?
+            <GridView events={ this.props.events } /> :
+            <ListView events={ this.props.events } />
+        }
       </div>
     )
   }
