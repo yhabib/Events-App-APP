@@ -30,9 +30,25 @@ class ViewContainer extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  events: state.events
-});
+const mapStateToProps = (state) => {
+  const stateFilter = state.filter.state;
+  const cityFilter = state.filter.city;
+  
+  const events = state.events.filter(event => {
+    const location = event.location;
+    if(stateFilter && !cityFilter) 
+      return location.state === stateFilter 
+  
+    else if(cityFilter) 
+      return location.city === cityFilter;
+
+    else return true;
+  });
+  
+  return ({
+    events: events
+  });
+};
 
 const mapDispatchToProps = (dispatch) => ({
   fetchEvents: (data) => dispatch(fetchEvents(data)),
