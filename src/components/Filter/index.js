@@ -10,15 +10,10 @@ import './index.css'
 const style = {
   margin: 12,
 };
+
 class Filter extends Component {
-  state = {
-    dataSource: [],
-    controlledDate: null,
-  };
 
   render() {
-    console.log('rendering filter');
-    
     return (
       <div className="FilterContainer">
         <div className="Filter">
@@ -42,10 +37,21 @@ class Filter extends Component {
           </DropDownMenu>
           <DatePicker className="Date"
             hintText="Controlled Date Input"
-            value={this.state.controlledDate}
+            value={{value: 1}}
             onChange={this.handleChange} />
           <RaisedButton className="SearchButton" label="Search" 
             primary={true} style={style} onClick={ this.props.onClick } />
+        </div>
+        <div className="Filter_Display">
+          {
+            Object.keys(this.props.filter).length > 0 ?
+              <p>
+                <i className="fa fa-map-marker" aria-hidden="true"></i>
+                {this.props.filter.city}/{this.props.filter.state}
+                <i className="fa fa-times" aria-hidden="true"></i>
+              </p> 
+              : ''
+          }
         </div>
       </div>
     );

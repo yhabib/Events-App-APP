@@ -54,14 +54,19 @@ class FilterContainer extends Component {
       cityValue={ this.state.cityValue }
       states={ this.state.states }
       cities={ this.state.cities }
+      filter={ this.props.filter}
       onChangeState={ this.handleChangeState }
       onChangeCity={ this.handleChangeCity }
       onClick={ this.submitFilter } />
   }
 }
 
-const mapDispatchToProps = (dispatch) => ({
-  setFilter: filter => dispatch(setFilter(filter))
+const mapStateToProps = (state) => ({
+    filter: state.filter,
 });
 
-export default connect(undefined, mapDispatchToProps)(FilterContainer);
+const mapDispatchToProps = (dispatch) => ({
+  setFilter: filter => dispatch(setFilter(filter)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(FilterContainer);

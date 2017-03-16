@@ -24,5 +24,8 @@
   position: relative;
   top: 8px;
   display: inline-block;
+}
 
+.Filter_Display p {
+  text-align: right;
 }
