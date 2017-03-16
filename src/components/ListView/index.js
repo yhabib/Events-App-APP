@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import './index.css'
 
 class ListView extends Component {
@@ -17,7 +16,7 @@ class ListView extends Component {
 function Item(props) {
   return (
     <div className="posterGridBox">
-        <img src={ props.event.eventImage } className="posterGridImg"  />
+        <img src={ props.event.eventImage } className="posterGridImg"  alt="Events cover"/>
         <h3>{props.event.name}</h3>
     </div>
   )

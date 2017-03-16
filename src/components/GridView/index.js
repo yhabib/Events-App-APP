@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-import ItemViewContainer from './../ItemView';
-
 import './index.css'
 
 class GridView extends Component {

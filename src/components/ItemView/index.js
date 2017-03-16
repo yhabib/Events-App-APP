@@ -40,7 +40,7 @@ function Item(props) {
             <div className="map">
 
             <h4>Map</h4>
-            <img width="500px" height="300px" />
+            <img width="500px" height="300px" alt="Map"/>
             </div>
         </div>
     </div>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import { BASE_URL } from './../../store/constants';
 import Filter from './../../components/Filter';
@@ -55,7 +56,7 @@ class FilterContainer extends Component {
       cities={ this.state.cities }
       onChangeState={ this.handleChangeState }
       onChangeCity={ this.handleChangeCity }
-      onClick= { this.submitFilter } />
+      onClick={ this.submitFilter } />
   }
 }
 
@@ -63,4 +64,4 @@ const mapDispatchToProps = (dispatch) => ({
   setFilter: filter => dispatch(setFilter(filter))
 });
 
-export default FilterContainer;
+export default connect(mapDispatchToProps)(FilterContainer);
