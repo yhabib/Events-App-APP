@@ -43,10 +43,6 @@ const Root = () => (
   </Provider>
 );
 
-{/*<HeaderContainer />
-      <FilterContainer />
-      <GridViewContainer />*/}
-
 
 ReactDOM.render(
   <Root />,
