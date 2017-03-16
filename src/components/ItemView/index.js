@@ -13,18 +13,17 @@ class ItemView extends Component {
 
 
 function Item(props) {
-  console.log(props);
   const event = props.event || {};
   const location = props.event.location || {};
 
   return (
     <div className="posterItemContainer">
         <hr />
-        <img src={ props.event.eventImage } className="posterItemView" alt={ props.event.name } />
+        <img src={ event.eventImage } className="posterItemView" alt={ event.name } />
         <div className="data">
-            <h3>{props.event.name}</h3>
-            <h4>{props.event.eventStartDate}</h4>
-            <p>{props.event.description}</p>
+            <h3>{event.name}</h3>
+            <h4>{event.eventStartDate}</h4>
+            <p>{event.description}</p>
 
             <div>
             <hr />
@@ -42,24 +41,15 @@ function Item(props) {
                     <p>Web: www.go.ch</p>
                 </div>
             </div>
-
-
-<hr />
+            <hr />
             <div className="map">
 
             <h4>Map</h4>
             <img width="500px" height="300px" />
             </div>
-
         </div>
     </div>
   )
 }
 
 export default ItemView;
-//   <p>{props.event.location.city}</p>
-// <p>{props.event.location.street}</p>
-// <p>{props.event.location.number}</p>
-// <p>{props.event.location.city}</p>
-// <p>{props.event.location.country}</p>
-//

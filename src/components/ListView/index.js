@@ -24,6 +24,3 @@ function Item(props) {
 }
 
 export default ListView;
-
-  //<date>{props.event.eventStartDate}</date>
-//<h3>{props.event.name}</h3>
