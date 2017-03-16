@@ -20,16 +20,15 @@ class Filter extends Component {
     return (
       <div className="FilterContainer">
         <div className="Filter">
-          <DropDownMenu className="Item" value={this.props.value} onChange={this.props.onChangeValue}>
+          <DropDownMenu className="Item" value={ this.props.stateValue } onChange={ this.props.onChangeState }>
             {
               this.props.states.map((state, i) =>
                 <MenuItem key={i} value={i} primaryText={state} />)
             }
           </DropDownMenu>
-          <DropDownMenu className="Item">
+          <DropDownMenu className="Item" value={ this.props.cityValue } onChange={ this.props.onChangeCity }>
             {
-              this.props.cities.map((city, i) =>
-                <MenuItem key={i} primaryText={city} />)
+              this.props.cities.map((city, i) => <MenuItem key={i} primaryText={city} />)
             }
           </DropDownMenu>
 
@@ -38,7 +37,7 @@ class Filter extends Component {
             value={this.state.controlledDate}
             onChange={this.handleChange}
           />
-          <RaisedButton className="SearchButton" label="Search" primary={true} style={style} />
+          <RaisedButton className="SearchButton" label="Search" primary={true} style={style} onClick={ this.props.onClick } />
         </div>
       </div>
     );

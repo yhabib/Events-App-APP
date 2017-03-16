@@ -3,24 +3,42 @@ import React, { Component } from 'react';
 import { BASE_URL } from './../../store/constants';
 import Filter from './../../components/Filter';
 
+import { setFilter  } from './../../store/actions/filter';
+
 class FilterContainer extends Component {
   constructor(props) {
     super(props)
     this.state = {
       states: [],
       cities: [],
-      value: 0
+      stateValue: 0,
+      cityValue: 0
     };
   }
 
-    handleChange = (e, value) => {
-      this.setState({ value });
-      const url = `${BASE_URL}/locations/states/${this.state.states[value]}/cities`;
-      fetch(url)
-        .then(data => data.json())
-        .then(cities => this.setState({ cities: [...new Set(cities)] }));
+  handleChangeState = (e, value) => {
+    this.setState({ stateValue: value });
+    const url = `${BASE_URL}/locations/states/${this.state.states[value]}/cities`;
+    fetch(url)
+      .then(data => data.json())
+      .then(cities => this.setState({ cities: [...new Set(cities)] }));
 
-    }
+  }
+
+  handleChangeCity = (e, value) => {
+    this.setState({ cityValue: value });
+    const url = `${BASE_URL}/locations/states/${this.state.states[value]}/cities`;
+    fetch(url)
+      .then(data => data.json())
+      .then(cities => this.setState({ cities: [...new Set(cities)] }));
+
+  }
+
+  submitFilter = () => {
+    console.log(this.state);
+    // change filterState
+    
+  };
 
   componentDidMount() {
     const url = `${BASE_URL}/locations/states`;
@@ -30,13 +48,19 @@ class FilterContainer extends Component {
   }
 
   render() {
-    return <Filter 
-            value={ this.state.value } 
-            states={ this.state.states }
-            cities={ this.state.cities }
-            onChangeValue={ this.handleChange } />;
+    return <Filter
+      stateValue={ this.state.stateValue }
+      cityValue={ this.state.cityValue }
+      states={ this.state.states }
+      cities={ this.state.cities }
+      onChangeState={ this.handleChangeState }
+      onChangeCity={ this.handleChangeCity }
+      onClick= { this.submitFilter } />
   }
 }
 
+const mapDispatchToProps = (dispatch) => ({
+  setFilter: filter => dispatch(setFilter(filter))
+});
 
 export default FilterContainer;
