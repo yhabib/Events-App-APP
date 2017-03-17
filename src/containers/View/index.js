@@ -1,4 +1,10 @@
 import React, { Component } from 'react';
+import {  
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom';
+
 import { connect } from 'react-redux';
 
 import GridView from './../../components/GridView';
@@ -17,19 +23,20 @@ class ViewContainer extends Component {
 
   render() {
     return (
-      <div>
-        <FilterContainer />
-        <NavigationBarContainer />
-        {
-          this.props.location.pathname.split('/').includes('grid') ?
-            <GridView events={this.props.events} /> :
-            <ListView events={this.props.events} />
-        }
-      </div>
+      <Router>
+        <div>
+          <FilterContainer />
+          <NavigationBarContainer />
+          <Switch>
+              <Route path="/events/grid" component={GridView} />
+              <Route path="/events/list" component={ListView} />
+          </Switch>
+        </div>
+      </Router>
     )
   }
 }
-
+          
 const mapStateToProps = (state) => {
   const stateFilter = state.filter.state;
   const cityFilter = state.filter.city;

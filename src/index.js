@@ -32,9 +32,8 @@ const Root = () => (
           <div>
             <HeaderContainer />
             <Switch>
-              <Route path="/events/grid" component={ViewContainer} />
-              <Route path="/events/list" component={ViewContainer} />
-              <Route path="/events/:id" component={ItemViewContainer} />
+              <Route path="/events" component={ViewContainer} />
+              <Route exact path="/events/:id" component={ItemViewContainer} />
             </Switch>
           </div>
         </div>

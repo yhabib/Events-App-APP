@@ -14,7 +14,7 @@ function Item(props) {
   const location = props.event.location || {};
   const q = `q=${location.street}+${location.number},${location.city}+${location.country}`;
   console.log(q);
-  
+
   return (
     <div className="posterItemContainer">
       <hr />
@@ -24,7 +24,7 @@ function Item(props) {
         <h4>{event.eventStartDate}</h4>
         <p>{event.description}</p>
 
-        <div>
+        <div className="boxContact">
           <hr />
           <div className="boxLeft">
             <h4>Adresse</h4>
@@ -44,7 +44,7 @@ function Item(props) {
         <div className="map">
 
           <h4>Map</h4>
-          <Map iframe='iframe' src={MAPS_URL + q} height="500" width="500" />,
+          <Map iframe='iframe' src={MAPS_URL + q} height="500" width="600" />,
         </div>
       </div>
     </div>
@@ -52,7 +52,7 @@ function Item(props) {
 }
 
 function Map(props) {
-  const Iframe = props.iframe;  
+  const Iframe = props.iframe;
   return (
     <div>
       <Iframe src={props.src} height={props.height} width={props.width} />
