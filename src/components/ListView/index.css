@@ -1,0 +1,44 @@
+.posterListContainer{
+width: 100%;
+margin: auto;
+
+}
+
+.posterListImg{
+  width: 200px;
+  box-shadow: 7px 7px 7px #ddd;
+
+}
+
+
+
+.posterListContainer h3{
+  font-size: 2.0em;
+  display: inline-block;
+  color: #555;
+}
+
+
+
+.itemLine{
+  width: 80%;
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+.itemData{
+   float: right;
+   width: 75%;
+}
+
+p{
+  color: grey;
+  font-size: 1.2em;
+
+}
+.viewMore{
+  margin-top: 20px;
+  border-radius: 5px 5px 5px 2px;
+  color: white;
+
+}

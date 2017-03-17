@@ -1,4 +1,4 @@
-html, 
+html,
 body,
 #root {
   width: 100%;
@@ -7,6 +7,6 @@ body,
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 50px;
   font-family: sans-serif;
 }

@@ -15,7 +15,9 @@
   display: inline-block;
 }
 
-.social {}
+.social {
+
+}
 
 .social ul {
   float: right;
@@ -40,8 +42,10 @@
 }
 
 .content {
+  margin-left: 130px;
   display: inline-block;
   color: grey;
+  margin-bottom: 45px;
 }
 
 .content h4 {
