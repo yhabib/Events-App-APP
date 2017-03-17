@@ -1,29 +1,46 @@
-.posterGridImg{
-  width: 230px;
-  height: 320px;
-  box-shadow: 7px 7px 7px #ddd;
-}
-
 .GridView_container {
-  margin: auto;
   width: 90%;
+  margin: auto;
+  padding-top: 50px;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  border: 1px solid black; 
 }
 
-.posterGridBox{
-  width: 250px;
-  height: 320px;
-  margin-bottom: 50px;
-  margin-top: 50px;
+.posterGridBox {
+  height: 350px;
+  width: calc(25% - 20px);
+  margin: 10px;
   background-color: white;
   text-align: center;
 }
 
-.posterGridBox h3{
+.posterGridImg {
+  width: 230px;
+  height: 300px;
+  box-shadow: 7px 7px 7px #ddd;
+}
+
+.posterGridBox h3 {
   font-size: 23px;
   color: grey;
   font-family: 'Roboto Condensed', sans-serif;
 }
 
+@media screen and (max-width: 1100px) {
+  .posterGridBox  {
+    width: calc(33% - 20px);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .posterGridBox  {
+    width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .posterGridBox  {
+    width: calc(100% - 20px);
+  }
+}
