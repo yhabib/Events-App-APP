@@ -36,7 +36,12 @@ class ViewContainer extends Component {
     )
   }
 }
-          
+          // {
+          //   this.props.location.pathname.split('/').includes('grid') ?
+          //     <GridView events={this.props.events} /> :
+          //     <ListView events={this.props.events} />
+          // }
+
 const mapStateToProps = (state) => {
   const stateFilter = state.filter.state;
   const cityFilter = state.filter.city;
